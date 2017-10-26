@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <script type="text/javascript">
+        /*ajax读取txt*/
+        /*$(function () {
+            $(".login").click(function(){
+                $.ajax({
+                    url:"data.txt",
+                    type:"GET",
+                    dataType:"text",
+                    success:function(data){
+                        console.log(data);
+                    }
+                });
+            });
+        })*/
+
+        /*ajax读取json数据
+        {'test'：1}单引号为畸形的JSON字符串*/
+        /*$(function () {
+            $(".login").click(function(){
+                $.ajax({
+                    url:"data.json",
+                    type:"GET",
+                    dataType:"json",
+                    success:function(data){
+                        $('.username').val(data[0].name);
+                        $('.pwd').val(data[0].pwd);
+                    }
+                });
+            });
+        })*/
+
+//        getJSON读取json数据
+        $(function () {
+           /* $(".login").click(function(){
+                $.getJSON("data.json",function(data){
+                    $(".login").after("<div><input value="+data[0].name+" /></div>");
+                    $(".login").after("<div><input value=\""+data[0].name+"\ /></div>")
+                });
+            });*/
+            /*$(".login").click(function(){
+                   $("#pwd").after("<span>append element</span>");
+                   $(".username").css("background-color","blue");
+                   console.log($("#pwd1").has('label'));
+                });*/
+
+
+
+        })
+
+        /*window.onload = function(){
+            var lab1 = document.getElementsByClassName("lab1");
+            var log = document.getElementsByClassName("login");
+            document.getElementsByClassName("login").onclick = function(){
+                lab1[0].style.fontSize = 20px;
+            }()
+        };*/
+
+//    window.onload = function () {
+//        console.log('onload');
+//
+//    };
+//
+//    document.ready = (function () {
+//        console.log('ready');
+//
+//    });
+//
+//    $(document).ready(function(){
+//        console.log('SSSS');
+//    });
+//
+//    $(function () {
+//        console.log('$$$$');
+//    })
+
+
+    </script>
+</head>
+<body>
+    <!--
+    abort() 停止当前请求
+    getAllResponseHeaders()  把HTTP请求的所有响应作为键/值对返回
+    getResponseHeader("header")  返回指定首部的串值
+    open("method","url")  建立对服务器的调用，method可谓get、post等，url为相对URL或绝对URL
+    send(content)  向服务器发送请求
+    setRequestHeader("header","value") 把指定首部设置为所提供的值，在设置任何首部之前必须先调用open()
+
+    onreadystatechange  每个状态改变都会触发这个事件处理器，通常会调用一个JS函数
+    readyState
+    responseText  服务器的响应，表示为一个串
+    responseXML  服务器的响应，表示为XML，这个对象可解析为DOM对象
+    status  服务器的HTTP状态码
+    statusText  HTTP状态码的相应文本
+    -->
+    <div id="user">
+        <label>Username</label>
+        <input class="username" type="text"/>
+    </div>
+    <div id="pwd">
+        <label>Password</label>
+        <input class="pwd" type="text" placeholder="123"/>
+    </div>
+    <input class="login" type="button" value="登录"/>
+    <img src="car.jpg"/>
+    <div id="pwd1">
+        <label class="lab1">Password1</label>
+        <input class="pwd1" type="text" placeholder="456"/>
+    </div>
+
+</body>
+</html>
